@@ -24,7 +24,7 @@ function LoginScreen() {
         px="6"
         justifyContent="center"
       >
-        <Heading>Welcom Back !!</Heading>
+        <Heading>Welcom Back !! </Heading>
         <VStack space={5} pt="6">
           <Input
             InputLeftElement={
@@ -63,7 +63,7 @@ function LoginScreen() {
         </Button>
         <Pressable mt={4}>
           <Text color={Colors.deepestGray} size="sm">
-            Don't have an account ? SIGN UP
+            Don't have an account ? SIGN UP 
           </Text>
         </Pressable>
       </Box>
