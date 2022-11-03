@@ -2,9 +2,10 @@ import React from 'react'
 import { Text, View } from 'react-native'
 
 function CartScreen() {
+
   return (
     <View>
-        <Text>CartScreen</Text>
+        <Text>CartScreen herenn</Text>
     </View>
   )
 }
