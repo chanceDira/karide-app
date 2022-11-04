@@ -24,5 +24,6 @@ npm start
 To successfully navigate the codebase of the project, you will need undertanding of the following technologies that are being used to develop this application:
 
 - React Native
+- Native Base
 - Javascript
 - Expo
