@@ -1,7 +1,8 @@
 import { Box, Text } from 'native-base'
 import React, { useState } from 'react'
-import { useWindowDimensions } from 'react-native'
+import { StyleSheet, useWindowDimensions } from 'react-native'
 import { SceneMap, TabBar } from 'react-native-tab-view'
+import Colors from '../../color'
 import ProfileScreen from '../../Screens/ProfileScreen'
 import Orders from './Orders'
 import Profile from './Profile'
@@ -24,7 +25,16 @@ const Tabs = () => {
     ])
 
     const renderTabsBar = (props) => (
-        <TabBar />
+        <TabBar
+          {...props}
+          tabStyle={style.tabStyle}
+          indicatorStyle={{backgroundColor: Colors.black}}
+          activeColor={Colors.main}
+          inactiveColor={Colors.white}
+          renderLabel={({routes,color}) => (
+            <Text style={{color, ...styles.text}}>{routes.title}</Text>
+          )}
+        />
     )
 
   return (
@@ -33,5 +43,15 @@ const Tabs = () => {
     </Box>
   )
 }
+
+const style = StyleSheet.create({
+  tabStyle: {
+    backgroundColor: 'black',
+  },
+  text: {
+    fontSize: 13,
+    fontWeight: 'bold'
+  }
+})
 
 export default Tabs

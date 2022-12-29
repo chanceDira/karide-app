@@ -14,8 +14,10 @@ function CartScreen() {
           Cart
         </Text>
       </Center>
+
       {/* If cart is empty */}
       {/* <CartEmpty /> */}
+
       {/* Cart Items */}
       <ScrollView showsVerticalScrollIndicator={false}>
         <CartItems />
@@ -25,7 +27,7 @@ function CartScreen() {
             rounded={50}
             justifyContent="space-between"
             bg={Colors.white}
-            shadow={2}
+            shadow={2}  
             w="90%"
             pl={5}
             h={45}
