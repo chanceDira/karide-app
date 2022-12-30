@@ -11,11 +11,11 @@ import ProfileScreen from './src/Screens/ProfileScreen';
 export default function App() {
   return (
     <NativeBaseProvider>
-     <CartScreen />
+     <ProfileScreen />
 
   </NativeBaseProvider>
 
   );
 }
 
-
+// 0788392932

@@ -15,7 +15,7 @@ function ProfileScreen() {
             source={{ uri: 'https://cdn.pixabay.com/photo/2022/10/31/10/18/red-deer-7559423_960_720.jpg' }} 
           />
           <Heading bold fontSize={15} isTruncated my={2} color={Colors.white}> 
-            Chance Dira
+            Chance Dira 
           </Heading>
           <Text italic fontSize={10} color={Colors.white}>
             Joined Jan 13 2019

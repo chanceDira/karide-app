@@ -1,13 +1,13 @@
 import { Box, Text } from 'native-base'
 import React, { useState } from 'react'
 import { StyleSheet, useWindowDimensions } from 'react-native'
-import { SceneMap, TabBar } from 'react-native-tab-view'
+import { SceneMap, TabBar, TabView } from 'react-native-tab-view'
 import Colors from '../../color'
 import ProfileScreen from '../../Screens/ProfileScreen'
 import Orders from './Orders'
 import Profile from './Profile'
 
-const renderScreen = SceneMap({
+const renderScene = SceneMap({
     first: Profile,
     second: Orders
 })
@@ -31,16 +31,20 @@ const Tabs = () => {
           indicatorStyle={{backgroundColor: Colors.black}}
           activeColor={Colors.main}
           inactiveColor={Colors.white}
-          renderLabel={({routes,color}) => (
-            <Text style={{color, ...styles.text}}>{routes.title}</Text>
+          renderLabel={({route,color}) => (
+            <Text style={{color, ...style.text}}>{route.title}</Text>
           )}
         />
     )
 
   return (
-    <Box>
-      <Text>Tabs</Text>
-    </Box>
+    <TabView 
+      navigationState={{index, routes}}
+      renderScene={renderScene} 
+      onIndexChange={setIndex}
+      initialLayout={{ width: layout.width }}
+      renderTabBar={renderTabsBar}
+    />
   )
 }
 
