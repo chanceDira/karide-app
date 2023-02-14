@@ -1,11 +1,73 @@
+import { Box, Center, FormControl, HStack, Image, Input, ScrollView, Spacer, Text, VStack } from 'native-base'
 import React from 'react'
-import { Text, View } from 'react-native'
+import Colors from '../color'
+import Buttone from '../Components/Buttone'
+import { Ionicons, FontAwesome } from "@expo/vector-icons"
+
+const paymentMethods = [
+  {
+    image: require("../../assets/images/paypal.png"),
+    alt: "paypal",
+    icon: "Ionicons"
+  },
+  {
+    image: require("../../assets/images/visa.png"),
+    alt: "discover",
+    icon: "fontAwesome"
+  },
+  {
+    image: require("../../assets/images/google.png"),
+    alt: "googlepay",
+    icon: "fontAwesome"
+  }
+]
 
 function PaymentScreen() {
   return (
-    <View>
-        <Text>PaymentScreen</Text>
-    </View>
+    <Box flex={1} safeAreaTop bg={Colors.main} py={5}>
+    {/* Header */}
+    <Center pb={15}>
+      <Text color={Colors.white} fontSize={14} bold>
+        PAYMENT METHOD
+      </Text>
+    </Center>
+    {/* Selection */}
+    <Box h='full' bg={Colors.subRed} px={5}>
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <VStack space={6} mt={5}>
+          {paymentMethods.map((i, index) => (
+             <HStack
+             key={index} 
+             alignItems='center' 
+             bg={Colors.white} 
+             px={3} 
+             py={1} 
+             justifyContent="space-between"
+             rounded={10}
+           >
+             <Box>
+               <Image  
+                 source={i.image}
+                 alt={i.alt}
+                 resizeMode='contain'
+                 w={60}
+                 h={50}
+               />
+             </Box>
+             {i.icon === "Ionicons" ? <Ionicons name="checkmark-circle" size={30} color={Colors.main} />
+             : <FontAwesome name="circle-thin" size={30} color={Colors.main} />}
+               
+            </HStack>
+          ))}
+          <Buttone bg={Colors.main} color={Colors.white} mt={5}>
+            CONTINUE
+          </Buttone>
+          <Text italic textAlign="center">Payment method is  
+          <Text bold> Paypal</Text> by default</Text>
+        </VStack>
+      </ScrollView>
+    </Box>
+</Box>
   )
 }
 
