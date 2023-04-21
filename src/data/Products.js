@@ -1,7 +1,7 @@
 const products = [
     {
         _id: '1',
-        name: 'Lorem test',
+        name: 'Lorem test 1',
         image: 'https://cdn.pixabay.com/photo/2020/04/09/19/08/auto-5022764_1280.jpg',
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
         price: '30000',
@@ -11,7 +11,7 @@ const products = [
     },
     {
         _id: '2',
-        name: 'Lorem test',
+        name: 'Lorem test 2',
         image: 'https://cdn.pixabay.com/photo/2020/04/09/19/08/auto-5022764_1280.jpg',
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
         price: '30000',
@@ -21,7 +21,7 @@ const products = [
     },
     {
         _id: '3',
-        name: 'Lorem test',
+        name: 'Lorem test 3',
         image: 'https://cdn.pixabay.com/photo/2020/04/09/19/08/auto-5022764_1280.jpg',
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
         price: '30000',
