@@ -14,16 +14,19 @@ import Rating from "../Components/Rating";
 import NumericInput from "react-native-numeric-input";
 import Buttone from '../Components/Buttone'
 import Review from "../Components/Review";
+import { useNavigation } from "@react-navigation/native";
 
 
-function SingleProductScreen() {
+function SingleProductScreen({route}) {
   const [value, setValue] = useState(0);
+  const navigation = useNavigation()
+  const product = route.params
   return (
     <Box safeArea flex={1} bg={Colors.white}>
       <ScrollView px={5} showsHorizontalScrollIndicator={false}>
         <Image
           source={{
-            uri: "https://cdn.pixabay.com/photo/2020/04/09/19/08/auto-5022764_1280.jpg",
+            uri: product.image,
           }}
           alt="Image"
           w="full"
@@ -31,9 +34,9 @@ function SingleProductScreen() {
           resizeMode="contain"
         />
         <Heading bold fontSize={15} mb={2} lineHeight={22}>
-          Benz Matic 2010
+          {product.name}
         </Heading>
-        <Rating value={4} />
+        <Rating value={product.rating} text={`${product.numReviews} reviews`} />
         <HStack space={2} alignItems="center" my={5}>
           <NumericInput
             value={value}
