@@ -11,6 +11,7 @@ import {
 } from "native-base";
 import Buttone from "./Buttone";
 import Colors from "../color";
+import { useNavigation } from "@react-navigation/native";
 
 const OrdersInfos = [
   {
@@ -36,6 +37,7 @@ const OrdersInfos = [
 ];
 
 const OrderModel = () => {
+  const navigation = useNavigation()
   const [showModel, setShowModel] = useState(false);
 
   return (
@@ -92,17 +94,20 @@ const OrderModel = () => {
             <Button
               w='full'
               mt={2}
-              bg={Colors.black}
+              bg={Colors.main}
               h={45}
               _text={{
                 color: Colors.white,
               }}
-              onPress={() => setShowModel(false)}
+              onPress={() => {
+                navigation.navigate('Home')
+                setShowModel(false)}
+              }
               _pressed={{
                 bg: Colors.black,
               }}
             >
-              PLACE AN ORDER
+              PAY LATER
             </Button>
           </Modal.Footer>
         </Modal.Content>

@@ -1,4 +1,4 @@
-import { HStack } from "native-base";
+import { HStack, Text } from "native-base";
 import React from "react";
 import { FontAwesome } from "@expo/vector-icons";
 import Colors from "../color";

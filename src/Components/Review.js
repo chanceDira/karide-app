@@ -107,7 +107,7 @@ export default function Review() {
           <Message
             color={Colors.white}
             bg={Colors.black}
-            children={`Please 'Login' to review this car`}
+            children={`Please 'Login' to review this cart`}
           />
         </VStack>
       </Box>

@@ -3,6 +3,7 @@ import React from 'react'
 import Colors from '../color'
 import Buttone from '../Components/Buttone'
 import { Ionicons, FontAwesome } from "@expo/vector-icons"
+import { useNavigation } from '@react-navigation/native'
 
 const paymentMethods = [
   {
@@ -23,6 +24,7 @@ const paymentMethods = [
 ]
 
 function PaymentScreen() {
+  const navigation = useNavigation()
   return (
     <Box flex={1} safeAreaTop bg={Colors.main} py={5}>
     {/* Header */}
@@ -59,7 +61,7 @@ function PaymentScreen() {
                
             </HStack>
           ))}
-          <Buttone bg={Colors.main} color={Colors.white} mt={5}>
+          <Buttone onPress={() => navigation.navigate('Placeorder')} bg={Colors.main} color={Colors.white} mt={5}>
             CONTINUE
           </Buttone>
           <Text italic textAlign="center">Payment method is  
